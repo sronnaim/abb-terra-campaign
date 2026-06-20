@@ -1,0 +1,22 @@
+{
+  "HomePage": {
+    "title": "ABB Terra",
+    "tag1": "The superior charger.",
+    "tag2": "Starts from Rp10 M, free installation.",
+    "cta1": "Consult"
+  },
+  "HeroCarousel": {
+    "title1": "7000+ Chargers Installed Nationwide",
+    "desc1": "Thousands of EV owners and businesses across Indonesia trust our charging solutions.",
+    "title2": "Official ABB Distributor",
+    "desc2": "100% genuine ABB chargers and electrical parts with professional support.",
+    "title3": "Installation Guaranteed",
+    "desc3": "We do the installation and help until your charger is working properly.",
+    "title4": "2-Years Warranty",
+    "desc4": "Two years warranty and lifetime support, terms and conditions apply."
+  },
+  "metadata": {
+    "title": "Official ABB EV Charger Distributor in Indonesia | Elmecon Multikencana",
+    "description": "ABB electric vehicle charging solutions for homes and businesses."
+  }
+}
