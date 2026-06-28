@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Promo2 from "@/public/promo2.png";
-import Promo3 from "@/public/promo3.png";
-import Promo4 from "@/public/promo4.png";
-import Promo5 from "@/public/promo5.png";
+import Promo2 from "@/public/promo2.webp";
+import Promo3 from "@/public/promo3.webp";
+import Promo4 from "@/public/promo4.webp";
+import Promo5 from "@/public/promo5.webp";
 import "swiper/css";
 import { useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
@@ -99,7 +99,7 @@ export default function HeroCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-      
+
       {/* Navigation Buttons - Soft UI & Fully Rounded */}
       <div className="mt-4 flex justify-end gap-3 px-6">
         <Button
