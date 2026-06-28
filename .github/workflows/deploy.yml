@@ -1,0 +1,75 @@
+name: Deploy Next.js to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Package Build Artifacts
+        run: |
+          tar -czf deploy.tar.gz \
+            .next \
+            public \
+            package.json \
+            package-lock.json \
+            next.config.ts \
+            i18n \
+            messages \
+            lib \
+            components.json
+
+      - name: Copy Artifacts to EC2 via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "deploy.tar.gz"
+          target: "~/abb-terra-campaign"
+
+      - name: Deploy and Restart Application via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # Navigate to deploy directory
+            mkdir -p ~/abb-terra-campaign
+            cd ~/abb-terra-campaign
+
+            # Unpack deployment bundle and clean up tarball
+            tar -xzf deploy.tar.gz
+            rm deploy.tar.gz
+
+            # Install only production dependencies to optimize disk space
+            npm ci --only=production
+
+            # Load environment variables or configuration if required
+            # (Optionally export PORT if specified, defaults to 3000)
+            export PORT=${{ secrets.PORT || '3000' }}
+
+            # Restart Next.js app on PM2 (Reload if running, start if not)
+            pm2 describe abb-terra-campaign > /dev/null \
+              && pm2 reload abb-terra-campaign \
+              || pm2 start npm --name "abb-terra-campaign" -- start
