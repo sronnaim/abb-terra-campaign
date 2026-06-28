@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/AppHeader";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const roboto = Roboto({
@@ -19,14 +19,65 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  const messages = await getMessages();
+
+  // Schema data for SEO Rich Snippets
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "ABB Terra EV Charger Series",
+    image: [
+      "https://terra.elmecon-mk.store/promo1.png",
+      "https://terra.elmecon-mk.store/promo2.png",
+    ],
+    description:
+      locale === "id"
+        ? "Distributor resmi charger kendaraan listrik ABB di Indonesia. Dipercaya dengan lebih dari 7.000 instalasi di seluruh Indonesia, instalasi gratis, garansi 2 tahun."
+        : "Official ABB EV charger distributor in Indonesia. Trusted with 7,000+ installations nationwide, free installation, 2-year warranty.",
+    brand: {
+      "@type": "Brand",
+      name: "ABB",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "IDR",
+      lowPrice: "10000000",
+      offerCount: "2",
+    },
+  };
+
+  const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "PT Elmecon Multikencana - Official ABB Distributor",
+    image: "https://terra.elmecon-mk.store/promo1.png",
+    url: "https://terra.elmecon-mk.store",
+    telephone: "+6281382124551",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Jakarta",
+      addressCountry: "ID",
+    },
+  };
+
   return (
     <html
       lang={locale}
       className={`${roboto.className} antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
+      </head>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

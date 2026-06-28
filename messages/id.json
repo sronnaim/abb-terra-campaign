@@ -2,25 +2,116 @@
   "HomePage": {
     "title": "ABB Terra",
     "tag1": "Charger paling superior.",
-    "tag2": "Mulai dari Rp10 jt, pemasangan gratis.",
+    "tag2": "Mulai dari Rp10 Juta, gratis pemasangan.",
     "headline1": "Kenapa pilih kami.",
     "headline2": "Yang anda dapat.",
-    "cta1": "Konsultasi"
+    "cta1": "Konsultasi",
+    "nav": {
+      "home": "Beranda",
+      "products": "Produk",
+      "benefits": "Keunggulan",
+      "estimator": "Estimasi Waktu",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "badge": "Distributor Resmi Charger EV ABB",
+      "heading": "Sleek. Aman. Pintar. Charger EV ABB Terra",
+      "subheading": "Bergabunglah dengan 7.000+ pemilik EV di Indonesia. Isi daya kendaraan listrik Anda dengan teknologi pengisian daya paling tepercaya di dunia. Pemasangan tuntas & siap pakai.",
+      "cta": "Konsultasi",
+      "promo_hint": "Dimulai dari",
+      "start_price": "Rp.10mio"
+    },
+    "stats": {
+      "stat1_num": "7.000+",
+      "stat1_text": "Charger Terpasang Nasional",
+      "stat2_num": "Resmi",
+      "stat2_text": "Distributor Resmi Authorized ABB",
+      "stat3_num": "2 Tahun",
+      "stat3_text": "Garansi Ganti Unit Baru"
+    },
+    "products": {
+      "title": "Seri Charger EV ABB Terra",
+      "subtitle": "Pilih charger terbaik untuk rumah, bisnis ritel, atau komersial Anda. Dirancang demi keamanan dan efisiensi kelistrikan maksimal.",
+      "ac_title": "ABB Terra AC Wallbox",
+      "ac_subtitle": "Sempurna untuk Perumahan & Parkir Ritel",
+      "ac_desc": "Solusi pengisian daya pintar dan ringkas yang tersedia dalam kapasitas 7.4kW, 11kW, dan 22kW. Dilengkapi manajemen beban pintar dan proteksi listrik bawaan.",
+      "dc_title": "ABB Terra DC Fast Charger",
+      "dc_subtitle": "Pengisian Cepat Komersial & Bisnis",
+      "dc_desc": "Isi daya EV dengan cepat dalam waktu 30-60 menit. Pilihan kapasitas 24kW hingga 50kW. Sangat cocok untuk area komersial, kantor, dan ruang publik.",
+      "ac_spec1": "Kapasitas: 7.4 kW / 11 kW / 22 kW",
+      "ac_spec2": "Konektor: Tipe 2 (Kabel Soket)",
+      "ac_spec3": "Konektivitas: WiFi, Bluetooth, RFID, Ethernet",
+      "ac_spec4": "Keamanan: Proteksi Arus Lebih, Tegangan Lebih, Kebocoran Grounding",
+      "dc_spec1": "Kapasitas: 50 kW Super Cepat",
+      "dc_spec2": "Konektor: CCS2 / CHAdeMO / Type 2 AC",
+      "dc_spec3": "Konektivitas: OCPP 1.6, RFID, Simcard 4G, LAN",
+      "dc_spec4": "Keamanan: Kontrol Suhu Canggih, Proteksi Input & Output",
+      "cta_ac": "Konsultasi Pemasangan di Rumah",
+      "cta_dc": "Konsultasi Komersial & DC Fast"
+    },
+    "benefits": {
+      "title": "Dirancang untuk Keamanan & Ketenangan Anda",
+      "subtitle": "Kami tidak sekadar menjual unit charger, melainkan memberikan solusi infrastruktur kelistrikan yang lengkap dan bebas khawatir.",
+      "point1_title": "Distributor Resmi ABB",
+      "point1_desc": "Kami menyalurkan produk ABB orisinal langsung dari pabrikan. Seluruh komponen listrik pendukung (MCB, kabel, RCBO) menggunakan merk ABB asli untuk jaminan keselamatan.",
+      "point2_title": "7.000+ Charger Terpasang",
+      "point2_desc": "Sebagai mitra instalasi terdepan di Indonesia, kami telah berhasil memasang ribuan unit charger EV di berbagai rumah, kantor, dan pusat perbelanjaan.",
+      "point3_title": "Dukungan Instalasi Sampai Operasional",
+      "point3_desc": "Tim engineer bersertifikat kami mengurus survei lokasi, gambar denah, penarikan kabel, pengurusan tambah daya PLN, hingga uji fungsi operasional sampai tuntas.",
+      "point4_title": "Garansi Ganti Unit 2 Tahun",
+      "point4_desc": "Isi daya dengan tenang. Nikmati garansi ganti unit baru selama 2 tahun apabila terjadi cacat pabrik pada unit charger Anda (sesuai S&K)."
+    },
+    "estimator": {
+      "title": "Kalkulator Waktu Pengisian & Hemat Biaya",
+      "subtitle": "Bandingkan seberapa cepat charger ABB Terra mengisi daya baterai kendaraan listrik Anda dibanding colokan rumah biasa, dan lihat estimasi hemat biaya bahan bakarnya.",
+      "select_ev": "Pilih Model Kendaraan Listrik",
+      "custom_battery": "Atau tentukan Kapasitas Baterai (kWh)",
+      "target_charge": "Target Pengisian (%)",
+      "from_text": "dari 10% ke",
+      "standard_plug": "Stop Kontak Biasa (2.2 kW)",
+      "terra_ac_7": "ABB Terra AC (7.4 kW)",
+      "terra_ac_11": "ABB Terra AC (11 kW)",
+      "terra_ac_22": "ABB Terra AC (22 kW)",
+      "terra_dc_24": "ABB Terra DC (24 kW)",
+      "hours": "jam",
+      "minutes": "menit",
+      "time_to_charge": "Estimasi Waktu",
+      "savings_title": "Estimasi Hemat Biaya BBM Bulanan",
+      "savings_desc": "Berdasarkan jarak tempuh 1.500 km/bulan dibandingkan mobil bermesin bensin konvensional.",
+      "savings_val": "Hemat sekitar Rp1.800.000 / bulan!"
+    },
+    "faq": {
+      "title": "Pertanyaan Umum (FAQ)",
+      "subtitle": "Punya kekhawatiran seputar daya listrik PLN, pemasangan, atau garansi? Berikut jawabannya.",
+      "q1": "Apakah daya listrik rumah saya cukup untuk pasang charger EV?",
+      "a1": "Rata-rata charger EV memerlukan daya minimal 7,4 kW. Kami siap memandu dan mendampingi Anda dalam proses pengajuan tambah daya PLN serta merakit sub-panel pengaman listrik dengan MCB ABB orisinal.",
+      "q2": "Apa saja yang dicakup dalam 'Dukungan Instalasi Sampai Operasional'?",
+      "a2": "Layanan kami meliputi survei teknis lokasi, pembuatan diagram kelistrikan, pemasangan unit charger, penarikan kabel ke panel, perakitan MCB/RCBO pengaman, pengujian grounding, dan setup aplikasi ABB charger di HP Anda.",
+      "q3": "Apa saja syarat Garansi Ganti Unit 2 Tahun?",
+      "a3": "Garansi berlaku untuk kerusakan fungsi internal unit akibat cacat pabrik. Garansi ini sah bila unit dipasang oleh teknisi resmi Elmecon dan diproteksi dengan komponen penangkal petir/surge protection serta MCB resmi ABB.",
+      "q4": "Bagaimana cara klaim kode promo saat konsultasi?",
+      "a4": "Cukup klik tombol hubungi WhatsApp kami. Kode promo khusus akan terisi otomatis pada template chat Anda sehingga tim sales kami dapat langsung mencatat diskon/promo Anda."
+    },
+    "whatsapp": {
+      "hello": "Halo, saya tertarik dengan Charger EV ABB Terra. Saya ingin konsultasi gratis.",
+      "ad_source": "Sumber Iklan",
+      "promo_code": "Kode Promo",
+      "interest": "Tertarik pada",
+      "home_charge": "Pengisian Rumah (AC)",
+      "commercial_charge": "Pengisian Cepat / Fast Charging (DC)",
+      "cta_floating": "Konsultasi"
+    }
   },
   "HeroCarousel": {
     "title1": "7.000+ Charger Terpasang di Seluruh Indonesia",
     "desc1": "Berpengalaman menyediakan solusi pengisian daya kendaraan listrik untuk rumah dan bisnis di seluruh Indonesia.",
-
     "title2": "Distributor Resmi ABB",
     "desc2": "Solusi pengisian daya ABB asli yang didukung konsultasi ahli dan layanan bantuan profesional.",
-
     "title3": "Instalasi Tanpa Ribet",
     "desc3": "Kami menangani proses instalasi dari awal hingga selesai untuk memastikan charger Anda berfungsi dengan baik.",
-
     "title4": "Garansi 2 Tahun & Dukungan Teknis Seumur Hidup",
     "desc4": "Isi daya dengan tenang dengan garansi hingga 2 tahun dan dukungan teknis seumur hidup dari tim kami."
   },
-
   "metadata": {
     "title": "Distributor Resmi Charger EV ABB di Indonesia | Elmecon Multikencana",
     "description": "Distributor resmi charger kendaraan listrik ABB di Indonesia. Dipercaya dengan lebih dari 7.000 instalasi di seluruh Indonesia, instalasi gratis, garansi 2 tahun, dan dukungan teknis seumur hidup."

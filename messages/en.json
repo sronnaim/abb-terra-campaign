@@ -2,10 +2,105 @@
   "HomePage": {
     "title": "ABB Terra",
     "tag1": "The superior charger.",
-    "tag2": "Starts from Rp10 M, free installation.",
+    "tag2": "Starts from Rp10 Million, free installation.",
     "headline1": "Why choose us.",
     "headline2": "What you get.",
-    "cta1": "Consult"
+    "cta1": "Consult",
+    "nav": {
+      "home": "Home",
+      "products": "Products",
+      "benefits": "Why Us",
+      "estimator": "Time Estimator",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "badge": "Official ABB EV Charger Distributor",
+      "heading": "Sleek. Safe. Smart. ABB Terra EV Chargers",
+      "subheading": "Join 7,000+ happy EV owners across Indonesia. Power up your electric vehicle with the world's most trusted charging technology. Complete installation support included.",
+      "cta": "Consult",
+      "promo_hint": "Starts from",
+      "start_price": "Rp.10jt"
+    },
+    "stats": {
+      "stat1_num": "7,000+",
+      "stat1_text": "Chargers Installed Nationwide",
+      "stat2_num": "Official",
+      "stat2_text": "ABB Authorized Distributor",
+      "stat3_num": "2 Years",
+      "stat3_text": "Unit Replacement Warranty"
+    },
+    "products": {
+      "title": "ABB Terra EV Charger Series",
+      "subtitle": "Choose the perfect charger for your home, retail space, or commercial building. Engineered for maximum safety and efficiency.",
+      "ac_title": "ABB Terra AC Wallbox",
+      "ac_subtitle": "Perfect for Residential & Retail Parking",
+      "ac_desc": "A compact, smart charging solution available in 7.4kW, 11kW, and 22kW capacities. Equipped with built-in load management and multiple safety features.",
+      "dc_title": "ABB Terra DC Fast Charger",
+      "dc_subtitle": "High-Speed Commercial Charging",
+      "dc_desc": "Quickly charge your EV in 30-60 minutes. Standard capacities of 24kW up to 50kW. Built for commercial applications and retail spaces.",
+      "ac_spec1": "Capacity: 7.4 kW / 11 kW / 22 kW",
+      "ac_spec2": "Connector: Type 2 (Tethered Socket)",
+      "ac_spec3": "Connectivity: WiFi, Bluetooth, RFID, Ethernet",
+      "ac_spec4": "Safety: Overcurrent, Overvoltage, Ground Fault Protection",
+      "dc_spec1": "Capacity: 50 kW Fast Charge",
+      "dc_spec2": "Connector: CCS2 / CHAdeMO / Type 2 AC",
+      "dc_spec3": "Connectivity: OCPP 1.6, RFID, 4G, LAN",
+      "dc_spec4": "Safety: Advanced Thermal Control, Input/Output Protection",
+      "cta_ac": "Consult for Home Installation",
+      "cta_dc": "Consult for Commercial/DC"
+    },
+    "benefits": {
+      "title": "Designed for Safety & Peace of Mind",
+      "subtitle": "We don't just sell chargers; we deliver a complete, worry-free electrical infrastructure.",
+      "point1_title": "Official ABB Distributor",
+      "point1_desc": "We supply direct, genuine ABB products. All auxiliary electrical components (MCBs, cables, RCBOs) are authentic ABB parts, ensuring optimal safety.",
+      "point2_title": "7,000+ Chargers Installed",
+      "point2_desc": "As Indonesia's leading installation partner, we have successfully deployed thousands of chargers in homes, offices, and shopping malls.",
+      "point3_title": "Full Operational Support",
+      "point3_desc": "Our certified engineers handle survey, installation, grid connection (PLN power upgrade), testing, and training until the unit is fully operational.",
+      "point4_title": "2-Year Unit Replacement",
+      "point4_desc": "Charge with total peace of mind. Get a comprehensive 2-year unit replacement warranty for manufacturing defects (subject to terms)."
+    },
+    "estimator": {
+      "title": "Charging Time & Savings Estimator",
+      "subtitle": "Find out how fast an ABB Terra charger can power your electric vehicle compared to a standard wall plug, and see your fuel cost savings.",
+      "select_ev": "Select Your EV Model",
+      "custom_battery": "Or set custom Battery Capacity (kWh)",
+      "target_charge": "Target Charge (%)",
+      "from_text": "from 10% to",
+      "standard_plug": "Standard Home Plug (2.2 kW)",
+      "terra_ac_7": "ABB Terra AC (7.4 kW)",
+      "terra_ac_11": "ABB Terra AC (11 kW)",
+      "terra_ac_22": "ABB Terra AC (22 kW)",
+      "terra_dc_24": "ABB Terra DC (24 kW)",
+      "hours": "hours",
+      "minutes": "minutes",
+      "time_to_charge": "Estimated Time",
+      "savings_title": "Estimated Monthly Fuel Savings",
+      "savings_desc": "Based on driving 1,500 km/month compared to a conventional petrol car.",
+      "savings_val": "Save approx. Rp1,800,000 / month!"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Got questions about power upgrades, warranty, or installation? We have answers.",
+      "q1": "Can my home electricity handle an EV Charger?",
+      "a1": "Most EV chargers require at least 7.4 kW. We provide full support to handle PLN power upgrade applications and install safe sub-distribution panels with genuine ABB MCBs.",
+      "q2": "What is included in the 'Installation Support until Operational'?",
+      "a2": "We conduct a pre-installation site survey, prepare drawings, install the charger, wire up to the main/sub panel with high-safety RCBO/MCB, test grounding, and configure the ABB charger app on your phone.",
+      "q3": "What are the terms for the 2-Year Unit Replacement Warranty?",
+      "a3": "The warranty covers any component failure due to manufacturing defects. It is valid when the unit is installed by Elmecon's certified technicians and protected with official ABB surge protection and MCBs.",
+      "q4": "How do I claim a promotional code?",
+      "a4": "Click any of our WhatsApp consultation buttons. A special promo code will be automatically filled into your chat template for our sales team to apply to your quotation."
+    },
+    "whatsapp": {
+      "hello": "Hi, I would like a free consultation for an ABB Terra EV Charger.",
+      "ad_source": "Ad Source",
+      "promo_code": "Promo Code",
+      "interest": "I am interested in",
+      "home_charge": "Home Charging (AC)",
+      "commercial_charge": "Commercial/Fast Charging (DC)",
+      "cta_floating": "Consult"
+    }
   },
   "HeroCarousel": {
     "title1": "7000+ Chargers Installed Nationwide",
