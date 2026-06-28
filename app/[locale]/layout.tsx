@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/AppHeader";
-import AppThemeProvider from "@/components/AntdProvider";
-import { Layout } from "antd";
 import { getTranslations } from "next-intl/server";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const roboto = Roboto({
   variable: "--font-roboto",
-  subsets: ["latin"],
-});
-
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -29,20 +22,21 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${roboto.variable} ${robotoMono.variable} antialiased`}
+      className={`${roboto.className} antialiased`}
       suppressHydrationWarning
     >
       <body>
-        <AntdRegistry>
-          <AppThemeProvider>
-            <NextIntlClientProvider>
-              <Layout>
-                <Header />
-                {children}
-              </Layout>
-            </NextIntlClientProvider>
-          </AppThemeProvider>
-        </AntdRegistry>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

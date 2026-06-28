@@ -1,16 +1,12 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import ThemeToggle from "./ThemeToggle";
-import { Layout, Space, Typography, Button, theme } from "antd";
-const { Header: AntHeader } = Layout;
-const { Title } = Typography;
+import { Button } from "./ui/button";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
   const router = useRouter();
-  const { Header } = Layout;
   const pathname = usePathname();
-  const { token } = theme.useToken();
 
   const switchLanguage = (locale: "en" | "id") => {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`;
@@ -21,21 +17,12 @@ export default function Header() {
   };
 
   return (
-    <AntHeader
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        background: token.colorBgBase,
-      }}
-    >
-      <Space>
-        <Button onClick={() => switchLanguage("id")}>ID</Button>
+    <div className="absolute flex items-center gap-2">
+      <Button onClick={() => switchLanguage("id")}>🇮🇩</Button>
 
-        <Button onClick={() => switchLanguage("en")}>EN</Button>
+      <Button onClick={() => switchLanguage("en")}>🇺🇸</Button>
 
-        <ThemeToggle />
-      </Space>
-    </AntHeader>
+      <ModeToggle />
+    </div>
   );
 }

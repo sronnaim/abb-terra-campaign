@@ -1,10 +1,12 @@
-export function ABBCursor() {
+import { cn } from "@/lib/utils";
+
+export function ABBCursor({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
-    <div
-      style={{ color: "var(--ant-color-primary)", margin: 0, padding: 0 }}
-      aria-hidden
-    >
-      {"—"}
+    <div {...props} className={cn("text-primary", className)} aria-hidden>
+      —
     </div>
   );
 }

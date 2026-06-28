@@ -1,60 +1,40 @@
-import { Button, Flex, Layout } from "antd";
 import { getTranslations } from "next-intl/server";
-import { Content } from "antd/es/layout/layout";
-import Title from "antd/es/typography/Title";
-import Paragraph from "antd/es/typography/Paragraph";
 import Image from "next/image";
 import Promo1 from "@/public/promo1.png";
 import { ABBCursor } from "@/components/ABBCursor";
 import HeroCarousel from "@/components/HeroCarousel";
+import { Button } from "@/components/ui/button";
 
 export default async function Home() {
   const t = await getTranslations("HomePage");
 
   return (
-    <Layout>
-      <Content
-        style={{
-          background: "var(--ant-color-bg-base)",
-        }}
-      >
-        <section className="h-screen">
-          <Flex
-            vertical
-            align="center"
-            justify="center"
-            style={{ height: "100%" }}
-          >
-            <div className="text-3xl">
-              <ABBCursor />
-              <Title style={{ fontSize: "1rem", margin: 0 }}>
-                {t("title")}
-              </Title>
-              <Paragraph
-                style={{ fontSize: "2rem", fontWeight: 600, margin: 0 }}
-              >
-                {t("tag1")}
-              </Paragraph>
-            </div>
-            <Image src={Promo1} alt="Product promo image" height={500} />
-            <Paragraph style={{ fontWeight: 600, marginBottom: 14 }}>
-              {t("tag2")}
-            </Paragraph>
-            <Button type="primary" style={{ color: "AccentColorText" }}>
-              {t("cta1")}
-            </Button>
-          </Flex>
-        </section>
-        <section>
-          <div className="text-3xl mx-4">
+    <div>
+      <section className="h-screen">
+        <div className="flex flex-col h-full justify-center items-center">
+          <div className="text-4xl font-semibold mx-4">
             <ABBCursor />
-            <Title style={{ fontSize: "2rem", fontWeight: 600 }}>
-              Why choose us.
-            </Title>
+            <h1 className="text-lg">{t("title")}</h1>
+            <p>{t("tag1")}</p>
           </div>
-          <HeroCarousel />
-        </section>
-      </Content>
-    </Layout>
+          <Image src={Promo1} alt="Product promo image" height={500} />
+          <p>{t("tag2")}</p>
+          <Button className="my-4">{t("cta1")}</Button>
+        </div>
+      </section>
+      <section>
+        <div className="text-4xl font-semibold m-4">
+          <ABBCursor />
+          <h2>{t("headline1")}</h2>
+        </div>
+        <HeroCarousel />
+      </section>
+      <section className="py-40">
+        <div className="text-4xl font-semibold m-4">
+          <ABBCursor />
+          <h2>{t("headline2")}</h2>
+        </div>
+      </section>
+    </div>
   );
 }

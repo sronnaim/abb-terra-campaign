@@ -7,11 +7,12 @@ import Promo3 from "@/public/promo3.png";
 import Promo4 from "@/public/promo4.png";
 import Promo5 from "@/public/promo5.png";
 import "swiper/css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import { Button } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ChevronLeft, ChevronRight } from "@hugeicons/core-free-icons";
+import { Button } from "./ui/button";
 
 const contents = [
   {
@@ -39,12 +40,20 @@ const contents = [
 export default function HeroCarousel() {
   const t = useTranslations("HeroCarousel");
   const swiperRef = useRef<SwiperType | null>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   return (
     <>
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
+          setIsBeginning(swiper.isBeginning);
+          setIsEnd(swiper.isEnd);
+        }}
+        onSlideChange={(swiper) => {
+          setIsBeginning(swiper.isBeginning);
+          setIsEnd(swiper.isEnd);
         }}
         slidesPerView={1.4}
         spaceBetween={32}
@@ -79,24 +88,22 @@ export default function HeroCarousel() {
       </Swiper>
       <div className="mt-6 flex justify-end gap-2 px-4">
         <Button
-          shape="circle"
-          icon={<LeftOutlined />}
           onClick={() => swiperRef.current?.slidePrev()}
-          style={{
-            background: "var(--ant-color-fill-content)",
-            border: "none",
-          }}
-        />
+          disabled={isBeginning}
+          size="icon"
+          className="bg-accent disabled:opacity-50"
+        >
+          <HugeiconsIcon icon={ChevronLeft} className="text-foreground/70" />
+        </Button>
 
         <Button
-          shape="circle"
-          icon={<RightOutlined />}
           onClick={() => swiperRef.current?.slideNext()}
-          style={{
-            background: "var(--ant-color-fill-content)",
-            border: "none",
-          }}
-        />
+          disabled={isEnd}
+          size="icon"
+          className="bg-accent disabled:opacity-50"
+        >
+          <HugeiconsIcon icon={ChevronRight} className="text-foreground/70" />
+        </Button>
       </div>
     </>
   );
